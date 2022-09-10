@@ -1,0 +1,15 @@
+@mixin flex($justify: true, $direction: true) {
+  display: flex;
+  
+  @if $direction {
+    flex-direction: column;
+  }
+
+  @if $justify {
+    justify-content: space-around;
+  }
+}
+
+@function pxToRem($px) {
+  @return calc($px / 16) + rem;
+}

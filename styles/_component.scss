@@ -1,0 +1,107 @@
+.component {
+  height: pxToRem(570);
+  max-width: pxToRem(350);
+  @include flex(false);
+  
+  border-radius: pxToRem(18);
+  background-color: white;
+
+  img {
+    max-height: pxToRem(180);
+    border-radius: pxToRem(18) pxToRem(18) 0 0;
+  }
+
+  .container {
+    @include flex();
+    height: 100%;
+
+    text-align: center;
+    padding: pxToRem(25) pxToRem(28) pxToRem(20) pxToRem(28);
+    
+    h1 {
+      margin-bottom: pxToRem(15);
+      font-size: pxToRem(23);
+      font-weight: 900;
+      color: $dark-blue;
+    }
+  
+    p {
+      line-height: pxToRem(26);
+      color: $desaturated-blue;
+    }
+  }
+
+  .plans {
+    @include flex(true, false);
+  
+    padding: pxToRem(15);
+    border-radius: pxToRem(8);
+    font-size: pxToRem(15);
+    background-color: $very-pale-blue;
+
+    div {
+      @include flex();
+      align-items: center;
+
+      span {
+        &:first-child {
+        font-weight: 900;
+        color: $dark-blue;
+        }
+
+        &:last-child {
+          color: $desaturated-blue;
+        }
+      }
+    }
+    
+    button {
+      border: none;
+      font-weight: 900;
+      text-decoration: underline;
+      color: $bright-blue;
+      background-color: $very-pale-blue;
+      cursor: pointer;
+
+      &:hover {
+        color: lighten($bright-blue, $amount: 20);
+      }
+    }
+
+  }
+
+  .buttons {
+    @include flex(false);
+    
+    button {
+      border: none;
+      padding-block: pxToRem(14);
+      border-radius: pxToRem(10);
+      font-weight: 900;
+      font-size: pxToRem(14);
+      cursor: pointer;
+  
+      &:first-child {
+        z-index: 2;
+        margin-bottom: pxToRem(10);
+        
+        box-shadow: 0 pxToRem(7) pxToRem(16) 0 lighten($bright-blue, $amount: 30);
+        color: white;
+        background-color: $bright-blue;
+
+        &:hover {
+          background-color: lighten($bright-blue, $amount: 20);
+        }
+      }
+  
+      &:last-child {
+        color: $desaturated-blue;
+        background-color: white;
+
+        &:hover {
+          color: darken($bright-blue, $amount: 20);
+        }
+      }
+    }
+  }
+}
