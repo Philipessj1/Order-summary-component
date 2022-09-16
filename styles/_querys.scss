@@ -7,9 +7,13 @@
       padding: pxToRem(20) pxToRem(28) pxToRem(15) pxToRem(28);
     }
   }
+
+  .attribution {
+    bottom: pxToRem(5);
+  }
 }
 
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 376px) {
   body {
     background-image: url(../assets/pattern-background-desktop.svg);
     background-repeat: no-repeat;
