@@ -10,6 +10,8 @@
   }
 }
 
+// Convert pixels to Rem
+
 @function pxToRem($px) {
   @return calc($px / 16) + rem;
 }
